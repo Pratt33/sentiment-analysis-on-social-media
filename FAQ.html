@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Project FAQ</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; color: #222; }
+        h1 { color: #2c3e50; }
+        .faq { margin-bottom: 2em; }
+        .question { font-weight: bold; margin-top: 1.5em; }
+        .answer { margin-left: 1em; margin-top: 0.3em; }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis Project FAQ</h1>
+    <div class="faq">
+        <div class="question">1. What is the main objective of this project?</div>
+        <div class="answer">To build a machine learning pipeline that classifies tweets as positive or negative, helping businesses monitor sentiment on social media.</div>
+
+        <div class="question">2. Which dataset did you use and why?</div>
+        <div class="answer">The Sentiment140 dataset from Kaggle, as it contains 1.6 million labeled tweets and is widely used for sentiment analysis benchmarks.</div>
+
+        <div class="question">3. How did you preprocess the text data?</div>
+        <div class="answer">Text was lowercased, stopwords removed, punctuation stripped, and stemming applied to reduce noise and standardize input.</div>
+
+        <div class="question">4. Which models did you train and how did you select the best one?</div>
+        <div class="answer">Logistic Regression, Naive Bayes, and SVM were trained. The best model was selected based on F1 score and overall accuracy on the validation set.</div>
+
+        <div class="question">5. How did you handle class imbalance in the dataset?</div>
+        <div class="answer">Class distribution was analyzed during EDA. The dataset is relatively balanced, so no resampling was needed, but metrics like F1 were used to ensure fair evaluation.</div>
+
+        <div class="question">6. What feature extraction technique did you use?</div>
+        <div class="answer">TF-IDF vectorization was used to convert text into numerical features for model training.</div>
+
+        <div class="question">7. How did you evaluate model performance?</div>
+        <div class="answer">Models were evaluated using accuracy, precision, recall, F1 score, confusion matrix, and ROC curve.</div>
+
+        <div class="question">8. How is the model deployed for real-time prediction?</div>
+        <div class="answer">A Streamlit web app loads the trained model and vectorizer, allowing users to input tweets and get instant sentiment predictions.</div>
+
+        <div class="question">9. What are some potential improvements for this project?</div>
+        <div class="answer">Adding neutral sentiment, using transformer models (like BERT), deploying as a REST API, and supporting multiple languages.</div>
+
+        <div class="question">10. How do you ensure reproducibility and clean project structure?</div>
+        <div class="answer">The project uses a modular folder structure, requirements.txt for dependencies, .gitignore for sensitive/large files, and all code/scripts are version controlled.</div>
+    </div>
+</body>
+</html> 
