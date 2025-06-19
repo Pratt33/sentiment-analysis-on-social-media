@@ -79,9 +79,9 @@ def evaluate_all_models(X_test, y_test, model_dir, output_dir):
 
 if __name__ == '__main__':
     import sys
-    model_dir = sys.argv[1] if len(sys.argv) > 1 else '../output'
+    model_dir = sys.argv[1] if len(sys.argv) > 1 else 'output'
     output_dir = model_dir
-    data_path = sys.argv[2] if len(sys.argv) > 2 else '../data/training.1600000.processed.noemoticon.csv'
+    data_path = sys.argv[2] if len(sys.argv) > 2 else 'data/training.1600000.processed.noemoticon.csv'
     from train import load_data
     import pickle
     # Load test data and vectorizer

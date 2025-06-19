@@ -1,8 +1,8 @@
 import streamlit as st
 import joblib
 
-model = joblib.load("sentiment-analysis/output/best_model.pkl")
-vectorizer = joblib.load("sentiment-analysis/output/vectorizer.pkl")
+model = joblib.load("output/best_model.pkl")
+vectorizer = joblib.load("output/vectorizer.pkl")
 
 st.title("Sentiment Analysis App")
 text = st.text_area("Enter text:")

@@ -65,4 +65,14 @@ coverage.xml
 .vscode/
 
 # Project-specific
-output/ 
+output/*
+!output/.gitkeep
+
+# Ignore all data files (do not commit datasets)
+data/*
+!data/.gitkeep
+*.zip
+*.csv
+
+# Kaggle API key (never commit this!)
+/kaggle.json 

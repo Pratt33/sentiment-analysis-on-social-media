@@ -41,6 +41,6 @@ def train_and_save_models(data_path, output_dir):
 
 if __name__ == '__main__':
     import sys
-    data_path = sys.argv[1] if len(sys.argv) > 1 else '../data/training.1600000.processed.noemoticon.csv'
-    output_dir = sys.argv[2] if len(sys.argv) > 2 else '../output'
+    data_path = sys.argv[1] if len(sys.argv) > 1 else 'data/training.1600000.processed.noemoticon.csv'
+    output_dir = sys.argv[2] if len(sys.argv) > 2 else 'output'
     train_and_save_models(data_path, output_dir) 

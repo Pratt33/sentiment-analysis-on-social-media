@@ -1,28 +1,44 @@
-# Sentiment Analysis on Twitter Data
+# Sentiment Analysis on Social Media
 
-## Overview
-This project performs sentiment analysis on Twitter data. The main tasks include data cleaning, preprocessing, and building a machine learning model to predict sentiments.
+## Project Overview
+This project performs sentiment analysis on tweets using machine learning models. It includes data preprocessing, exploratory data analysis (EDA), model training, evaluation, and a Streamlit web app for inference.
 
-## Requirements
-- Python 3.x
-- pandas
-- numpy
-- scikit-learn
-- nltk
-
-## Installation
-1. Clone the repository.
-   ```bash
-   git clone https://github.com/Pratt33/sentiment_analysis_on_social_media.git
-   ```
-2. Install the required packages.
-3. Download the necessary NLTK resources.
+## Directory Structure
+```
+./
+├── data/                 # Place datasets here (not tracked by git)
+├── notebooks/            # EDA and experimentation notebooks
+├── src/                  # Scripts: preprocess, model, evaluate
+├── app/                  # Streamlit app
+├── output/               # Model files, vectorizer (smallest only)
+├── requirements.txt      # Project dependencies
+├── README.md             # Project documentation
+├── LICENSE               # License info
+├── .gitignore            # Ignore rules for sensitive/large files
+```
 
 ## Usage
-1. Prepare your dataset and save it as `twitter_data.csv` in the project directory.
-2. Run the preprocessing script to clean and stem the text data.
-3. Split the data into training and testing sets.
-4. Build and train your machine learning model.
+1. **Download the Sentiment140 dataset** from [Kaggle](https://www.kaggle.com/datasets/kazanova/sentiment140) and place the CSV in `data/`.
+2. **Train models:**
+   ```bash
+   python src/train.py data/training.1600000.processed.noemoticon.csv output
+   ```
+3. **Evaluate and select best model:**
+   ```bash
+   python src/evaluate.py output data/training.1600000.processed.noemoticon.csv
+   ```
+4. **Run the Streamlit app:**
+   ```bash
+   streamlit run app/app.py
+   ```
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Security & Best Practices
+- **Never commit API keys (e.g., `kaggle.json`) or large data files.**
+- The `.gitignore` is set to exclude sensitive and large files by default.
+- Only small, necessary model files are kept in `output/` for deployment.
+
+## Example
+- Enter a tweet in the app and get a sentiment prediction (Positive/Negative).
+
+---
+For more details, see the code and comments in each script. 
