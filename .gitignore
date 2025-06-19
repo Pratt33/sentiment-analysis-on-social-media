@@ -65,6 +65,7 @@ coverage.xml
 .vscode/
 
 # Project-specific
+# Only keep model and vectorizer in output/
 output/*
 !output/.gitkeep
 !output/best_model.pkl
@@ -77,4 +78,4 @@ data/*
 *.csv
 
 # Kaggle API key (never commit this!)
-/kaggle.json 
+kaggle.json 
