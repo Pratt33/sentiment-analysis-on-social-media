@@ -67,6 +67,8 @@ coverage.xml
 # Project-specific
 output/*
 !output/.gitkeep
+!output/best_model.pkl
+!output/vectorizer.pkl
 
 # Ignore all data files (do not commit datasets)
 data/*
