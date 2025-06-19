@@ -65,11 +65,16 @@ coverage.xml
 .vscode/
 
 # Project-specific
-# Only keep model and vectorizer in output/
+# Only keep model, vectorizer, and reference images in output/
 output/*
 !output/.gitkeep
 !output/best_model.pkl
 !output/vectorizer.pkl
+!output/label_distribution.png
+!output/wordcloud_positive.png
+!output/wordcloud_negative.png
+!output/confusion_matrix.png
+!output/roc_curve.png
 
 # Ignore all data files (do not commit datasets)
 data/*

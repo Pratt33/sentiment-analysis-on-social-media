@@ -85,30 +85,17 @@ Given a large set of tweets, develop a machine learning pipeline to predict the 
 
 ## 💻 How to Run
 
-1. **Clone the repo:**
+1. Clone the repo and install dependencies:
    ```bash
    git clone https://github.com/your-username/sentiment-analysis-on-social-media.git
    cd sentiment-analysis-on-social-media
-   ```
-2. **Install dependencies:**
-   ```bash
    pip install -r requirements.txt
    ```
-3. **Download dataset:** Place `training.1600000.processed.noemoticon.csv` in `data/`.
-4. **Train models:**
+2. Download the dataset from Kaggle and place it in `data/`.
+3. Train, evaluate, and launch the app:
    ```bash
    python src/train.py data/training.1600000.processed.noemoticon.csv output
-   ```
-5. **Evaluate models:**
-   ```bash
    python src/evaluate.py output data/training.1600000.processed.noemoticon.csv
-   ```
-6. **Generate visuals:**
-   ```bash
-   python src/generate_visuals.py
-   ```
-7. **Run the app:**
-   ```bash
    streamlit run app/app.py
    ```
 
